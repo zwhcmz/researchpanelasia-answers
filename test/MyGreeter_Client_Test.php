@@ -18,10 +18,10 @@ class MyGreeter_Client_Test extends \PHPUnit_Framework_TestCase
 
     public function test_getGreeting()
     {
+        $greetArr = ["Good morning", "Good afternoon", "Good evening"];
         $this->assertTrue(
-            strlen($this->greeter->getGreeting()) > 0
+            in_array($this->greeter->getGreeting(), $greetArr)
         );
-        
     }
 
 }
